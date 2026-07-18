@@ -44,9 +44,15 @@ The system optimizes campus transportation by modeling the campus as a weighted 
 
 ## 🌐 Live Demo & Deployment
 
+<<<<<<< HEAD
 - **Live Frontend Application**: [https://campus-carry-rho.vercel.app](https://campus-carry-rho.vercel.app)
 - **Alternate Frontend Mirror**: [https://pathfinder.mayankrajtools.me](https://pathfinder.mayankrajtools.me)
 - **Live Backend API**: [https://api-pathfinder.mayankrajtools.me/api](https://api-pathfinder.mayankrajtools.me/api)
+=======
+- **Live Frontend Application**: [https://pathfinder-henna-xi.vercel.app/)
+- 
+- **Live Backend API**: [https://pathfinder-cliq.onrender.com/)
+>>>>>>> 72c172c3cac33686bedaec90b7f91b0b95fec581
 
 ---
 
@@ -216,14 +222,12 @@ Contributions are welcome! Please follow these guidelines:
 
 ---
 
-## 📄 License
 
-Distributed under the MIT License. See [LICENSE](LICENSE) (or package config) for details.
 
 ---
 
 ## ✉️ Contact
 
-- **Author**: Mayank Raj
+- **Author**: Prince
 - **GitHub**: [@princedev05](https://github.com/princedev05)
 - **Project Link**: [https://github.com/princedev05/pathfinder](https://github.com/princedev05/pathfinder)
