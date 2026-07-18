@@ -49,6 +49,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
+app.get("/", (req, res) => {
+    res.status(200).json({ success: true, message: "Pathfinder Backend API is running successfully!" });
+});
+
 app.get("/health", (req, res) => {
     res.status(200).json({ success: true, message: "Backend is healthy" });
 });
