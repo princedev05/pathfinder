@@ -22,8 +22,8 @@ const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:5174",
     "http://127.0.0.1:5173",
-    "https://intelliroute-frontend.onrender.com",
-    "https://intelliroute.mayankrajtools.me",
+    "https://pathfinder-frontend.onrender.com",
+    "https://pathfinder.mayankrajtools.me",
     process.env.FRONTEND_URL, // Add from env variable
 ].filter(Boolean); // Remove undefined values
 

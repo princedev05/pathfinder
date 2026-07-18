@@ -124,7 +124,7 @@ graph[node1].push({ node: node2, weight: dist });`
         <div className={styles.homePage}>
             <div className={styles.compactHero}>
                 <h1 className={styles.title}>
-                    Welcome to IntelliRoute
+                    Welcome to Pathfinder
                     {state.user && <span className={styles.userName}>, {state.userName}</span>}
                 </h1>
                 <p className={styles.subtitle}>

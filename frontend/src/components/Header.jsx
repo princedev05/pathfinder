@@ -52,7 +52,7 @@ const Header = () => {
         <div className={styles.header}>
             <AutoRedirect />
             <Link to="/" className={styles.appName}>
-                <h1 className={styles.title}>IntelliRoute</h1>
+                <h1 className={styles.title}>Pathfinder</h1>
             </Link>
             <div className={styles.buttons}>
                 {!state.user ? (

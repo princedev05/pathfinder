@@ -45,8 +45,8 @@ The system optimizes campus transportation by modeling the campus as a weighted 
 ## 🌐 Live Demo & Deployment
 
 - **Live Frontend Application**: [https://campus-carry-rho.vercel.app](https://campus-carry-rho.vercel.app)
-- **Alternate Frontend Mirror**: [https://intelliroute.mayankrajtools.me](https://intelliroute.mayankrajtools.me)
-- **Live Backend API**: [https://api-intelliroute.mayankrajtools.me/api](https://api-intelliroute.mayankrajtools.me/api)
+- **Alternate Frontend Mirror**: [https://pathfinder.mayankrajtools.me](https://pathfinder.mayankrajtools.me)
+- **Live Backend API**: [https://api-pathfinder.mayankrajtools.me/api](https://api-pathfinder.mayankrajtools.me/api)
 
 ---
 

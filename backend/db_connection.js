@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 export const connectDB = async () => {
     try {
         const mongoUrl =
-            (process.env.MONGODB_URL || process.env.MONGO_URI || "mongodb://127.0.0.1:27017/intelliroute").trim();
+            (process.env.MONGODB_URL || process.env.MONGO_URI || "mongodb://127.0.0.1:27017/pathfinder").trim();
         const dbName = process.env.MONGO_DB_NAME || process.env.DB_NAME || "pathfinder";
         const normalizedMongoUrl = /\/[^/?#]+(?:\?|#|$)/.test(mongoUrl)
             ? mongoUrl
