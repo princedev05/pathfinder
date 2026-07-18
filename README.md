@@ -216,14 +216,12 @@ Contributions are welcome! Please follow these guidelines:
 
 ---
 
-## 📄 License
 
-Distributed under the MIT License. See [LICENSE](LICENSE) (or package config) for details.
 
 ---
 
 ## ✉️ Contact
 
-- **Author**: Mayank Raj
+- **Author**: Prince
 - **GitHub**: [@princedev05](https://github.com/princedev05)
 - **Project Link**: [https://github.com/princedev05/pathfinder](https://github.com/princedev05/pathfinder)
