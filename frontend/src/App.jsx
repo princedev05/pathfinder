@@ -1,41 +1,55 @@
-import { useContext, useEffect } from "react";
-import { Outlet } from "react-router-dom";
-import Header from "./components/Header.jsx";
-import { GlobalContext } from "./GlobalContext.jsx";
-import { getUserNameFromCookie } from "./utilities/cookie.utility.js";
-import "./App.css";
+import React, { useEffect } from "react";
+import { RouteProvider, useRoute } from "./context/RouteContext";
+import Navbar from "./components/Navbar";
+import LandingPage from "./pages/LandingPage";
+import PlaceSelectPage from "./pages/PlaceSelectPage";
+import ResultsPage from "./pages/ResultsPage";
+import RouteLoader from "./components/RouteLoader";
 
-function App() {
-    const { state, dispatch } = useContext(GlobalContext);
+function AppContent() {
+  const { activeStep, setActiveStep, handleResetPlan } = useRoute();
 
-    useEffect(() => {
-        // Load userName from cookie on mount/reload
-        const userName = getUserNameFromCookie();
-        if (userName) {
-            console.log("App.jsx: Setting userName from cookie:", userName);
-            dispatch({ type: "SET_USER_NAME", payload: userName });
-        }
-    }, [dispatch]);
+  // Sync state with URL hash for modular routing
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash === "select" || hash === "results" || hash === "landing") {
+        setActiveStep(hash);
+      }
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [setActiveStep]);
 
-    // Also set userName when user state changes
-    useEffect(() => {
-        if (state.user && !state.userName) {
-            const userName = getUserNameFromCookie();
-            if (userName) {
-                console.log("App.jsx: User loaded, setting userName:", userName);
-                dispatch({ type: "SET_USER_NAME", payload: userName });
-            }
-        }
-    }, [state.user, state.userName, dispatch]);
+  const handleNavigate = (step) => {
+    setActiveStep(step);
+    window.location.hash = step;
+  };
 
-    return (
-        <>
-            <Header />
-            <main>
-                <Outlet />
-            </main>
-        </>
-    );
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
+      <Navbar
+        activeStep={activeStep}
+        onNavigate={handleNavigate}
+        onReset={handleResetPlan}
+      />
+
+      <main>
+        {activeStep === "landing" && <LandingPage />}
+        {activeStep === "select" && <PlaceSelectPage />}
+        {activeStep === "loading" && (
+          <RouteLoader onComplete={() => handleNavigate("results")} />
+        )}
+        {activeStep === "results" && <ResultsPage />}
+      </main>
+    </div>
+  );
 }
 
-export default App;
+export default function App() {
+  return (
+    <RouteProvider>
+      <AppContent />
+    </RouteProvider>
+  );
+}
