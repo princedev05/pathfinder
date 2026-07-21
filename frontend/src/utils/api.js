@@ -1,5 +1,17 @@
 import axios from "axios";
 
+// Environment-aware API base URL configuration for production deployments
+const API_BASE_URL = (
+  import.meta.env.VITE_BACKEND_URL ||
+  import.meta.env.VITE_API_BASE_URL ||
+  import.meta.env.VITE_API_URL ||
+  ""
+).replace(/\/$/, "");
+
+const apiClient = axios.create({
+  baseURL: API_BASE_URL
+});
+
 // Fallback seeded data if backend is offline
 const FALLBACK_CITIES = [
   {
@@ -128,7 +140,7 @@ const FALLBACK_CITIES = [
 
 export async function fetchCities() {
   try {
-    const res = await axios.get("/api/cities");
+    const res = await apiClient.get("/api/cities");
     if (res.data && res.data.cities) {
       return res.data.cities;
     }
@@ -140,7 +152,7 @@ export async function fetchCities() {
 
 export async function optimizeRouteApi(payload) {
   try {
-    const res = await axios.post("/api/optimize", payload);
+    const res = await apiClient.post("/api/optimize", payload);
     return res.data;
   } catch (err) {
     console.warn("Backend API optimize error, executing client-side fallback solver.", err.message);
@@ -150,7 +162,7 @@ export async function optimizeRouteApi(payload) {
 
 export async function fetchRouteGeometryApi(payload) {
   try {
-    const res = await axios.post("/api/route-geometry", payload);
+    const res = await apiClient.post("/api/route-geometry", payload);
     return res.data.geometry;
   } catch (err) {
     console.warn("Backend API geometry error, using straight line fallback.", err.message);
@@ -166,7 +178,7 @@ export async function fetchRouteGeometryApi(payload) {
 
 export async function saveTripApi(payload) {
   try {
-    const res = await axios.post("/api/trips", payload);
+    const res = await apiClient.post("/api/trips", payload);
     return res.data;
   } catch (err) {
     console.warn("Save trip error:", err.message);
@@ -176,7 +188,7 @@ export async function saveTripApi(payload) {
 
 export async function fetchSavedTripApi(tripId) {
   try {
-    const res = await axios.get(`/api/trips/${tripId}`);
+    const res = await apiClient.get(`/api/trips/${tripId}`);
     return res.data.trip;
   } catch (err) {
     console.warn("Fetch saved trip error:", err.message);
@@ -186,7 +198,7 @@ export async function fetchSavedTripApi(tripId) {
 
 export async function seedCitiesApi() {
   try {
-    const res = await axios.post("/api/cities/seed");
+    const res = await apiClient.post("/api/cities/seed");
     return res.data;
   } catch (err) {
     console.warn("Seed cities error:", err.message);

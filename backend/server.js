@@ -1,3 +1,8 @@
+try {
+  require("dotenv").config();
+} catch (err) {
+  // dotenv is optional in environments where variables are set directly
+}
 const express = require("express");
 const cors = require("cors");
 const { connectDB } = require("./config/db");
