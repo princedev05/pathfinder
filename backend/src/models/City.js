@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const PlaceSchema = new mongoose.Schema({
   id: { type: String, required: true },
@@ -28,4 +28,5 @@ const CitySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("City", CitySchema);
+const City = mongoose.model("City", CitySchema);
+export default City;

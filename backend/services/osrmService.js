@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 // Haversine formula to compute distance between two lat/lng coordinates in meters
 function haversineDistance(lat1, lon1, lat2, lon2) {
@@ -118,7 +118,7 @@ async function fetchRouteGeometry(orderedPlaces, mode = "foot") {
   };
 }
 
-module.exports = {
+export {
   haversineDistance,
   fetchOsrmMatrix,
   fetchRouteGeometry

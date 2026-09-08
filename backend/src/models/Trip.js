@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const LegSchema = new mongoose.Schema({
   from: { type: String },
@@ -9,6 +9,7 @@ const LegSchema = new mongoose.Schema({
 
 const TripSchema = new mongoose.Schema(
   {
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     tripId: { type: String, required: true, unique: true },
     title: { type: String, default: "Optimized Trip" },
     cityId: { type: String, required: true },
@@ -26,4 +27,5 @@ const TripSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Trip", TripSchema);
+const Trip = mongoose.model("Trip", TripSchema);
+export default Trip;

@@ -457,4 +457,4 @@ const CITIES_DATA = [
   }
 ];
 
-module.exports = { CITIES_DATA };
+export { CITIES_DATA };

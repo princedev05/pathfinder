@@ -1,8 +1,10 @@
 import React from "react";
 import PlaceSelect from "../components/PlaceSelect";
 import { useRoute } from "../context/RouteContext";
+import { useNavigate } from "react-router-dom";
 
 export default function PlaceSelectPage() {
+  const navigate = useNavigate();
   const {
     cities,
     selectedCity,
@@ -19,6 +21,11 @@ export default function PlaceSelectPage() {
     runOptimization
   } = useRoute();
 
+  const handleOptimize = async () => {
+    await runOptimization();
+    navigate("/results");
+  };
+
   return (
     <PlaceSelect
       cities={cities}
@@ -34,7 +41,7 @@ export default function PlaceSelectPage() {
       onToggleRoundTrip={handleToggleRoundTrip}
       startPlaceId={startPlaceId}
       onChangeStartPlace={setStartPlaceId}
-      onOptimize={() => runOptimization()}
+      onOptimize={handleOptimize}
     />
   );
 }

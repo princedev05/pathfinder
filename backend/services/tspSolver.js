@@ -1,4 +1,4 @@
-const { fetchOsrmMatrix, fetchRouteGeometry } = require("./osrmService");
+import { fetchOsrmMatrix, fetchRouteGeometry } from "./osrmService.js";
 
 /**
  * Held-Karp Dynamic Programming (Bitmask DP) TSP Solver
@@ -141,7 +141,7 @@ async function optimizeRoute({ places, mode = "foot", roundTrip = false, startPl
   };
 }
 
-module.exports = {
+export {
   optimizeRoute,
   fetchRouteGeometry
 };

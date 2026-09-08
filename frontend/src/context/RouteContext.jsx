@@ -88,28 +88,38 @@ export function RouteProvider({ children }) {
         cityId: selectedCity.id,
         mode,
         roundTrip: rt,
-        startPlaceId: sp
+        startPlaceId: sp,
+        places: selectedCity.places
       });
 
-      setOptimizationData(result);
+      const dataPayload = result?.data || result;
+      const orderIds = dataPayload?.order || [];
+
+      setOptimizationData(dataPayload);
 
       // Map order IDs back to place objects
       const allPlaces = selectedCity ? selectedCity.places : [];
-      const ordered = result.order
+      let ordered = orderIds
         .map((id) => allPlaces.find((p) => p.id === id))
         .filter(Boolean);
+
+      // Robust fallback if orderIds didn't map or was empty
+      if (ordered.length === 0 && ids.length > 0) {
+        ordered = ids.map((id) => allPlaces.find((p) => p.id === id)).filter(Boolean);
+      }
 
       setOrderedPlaces(ordered);
 
       // Fetch geometry for map polyline
       const geometry = await fetchRouteGeometryApi({
-        order: result.order,
+        order: orderIds.length > 0 ? orderIds : ids,
         cityId: selectedCity.id,
         mode,
         places: ordered
       });
 
       setRouteGeometry(geometry);
+      setActiveStep("results");
     } catch (err) {
       console.error("Optimization error:", err);
     }

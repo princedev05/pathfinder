@@ -135,14 +135,408 @@ const FALLBACK_CITIES = [
         image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=600&q=80"
       }
     ]
+  },
+  {
+    id: "chandigarh",
+    name: "Chandigarh",
+    state: "Punjab & Haryana",
+    country: "India",
+    center: { lat: 30.7333, lng: 76.7794 },
+    zoom: 13,
+    description: "India's premier planned city, renowned for modern Le Corbusier architecture and urban gardens.",
+    places: [
+      {
+        id: "rock-garden",
+        name: "Nek Chand's Rock Garden",
+        lat: 30.7525,
+        lng: 76.8053,
+        category: "Sculpture Garden",
+        suggestedVisitMinutes: 90,
+        description: "Unbelievable 40-acre sculpture garden crafted entirely from urban industrial and home waste.",
+        image: "https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "sukhna-lake",
+        name: "Sukhna Lake",
+        lat: 30.7421,
+        lng: 76.8188,
+        category: "Scenic Lake",
+        suggestedVisitMinutes: 60,
+        description: "Serene man-made reservoir at the foothills of the Shivalik range with boating.",
+        image: "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "rose-garden",
+        name: "Zakir Hussain Rose Garden",
+        lat: 30.7460,
+        lng: 76.7820,
+        category: "Botanical Garden",
+        suggestedVisitMinutes: 45,
+        description: "Asia's largest rose garden featuring over 1,600 varieties of roses across 30 acres.",
+        image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "capitol-complex",
+        name: "Le Corbusier Capitol Complex",
+        lat: 30.7594,
+        lng: 76.8016,
+        category: "UNESCO Heritage",
+        suggestedVisitMinutes: 60,
+        description: "Architectural masterpiece by Le Corbusier featuring the High Court and Open Hand Monument.",
+        image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "elante-mall",
+        name: "Elante Mall & Commercial Hub",
+        lat: 30.7056,
+        lng: 76.8013,
+        category: "Shopping & Dining",
+        suggestedVisitMinutes: 60,
+        description: "One of Northern India's largest shopping and entertainment destinations.",
+        image: "https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "japanese-garden",
+        name: "Japanese Garden (Sector 31)",
+        lat: 30.7090,
+        lng: 76.7865,
+        category: "Themed Garden",
+        suggestedVisitMinutes: 45,
+        description: "Tranquil garden incorporating traditional Japanese architecture, pagodas, and waterfalls.",
+        image: "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  },
+  {
+    id: "jaipur",
+    name: "Jaipur",
+    state: "Rajasthan",
+    country: "India",
+    center: { lat: 26.9124, lng: 75.7873 },
+    zoom: 13,
+    description: "The Pink City — royal capital of Rajasthan filled with grand hill forts and terracotta palaces.",
+    places: [
+      {
+        id: "amber-fort",
+        name: "Amber Palace (Amer Fort)",
+        lat: 26.9855,
+        lng: 75.8513,
+        category: "Royal Fort",
+        suggestedVisitMinutes: 120,
+        description: "Majestic hilltop fort featuring Sheesh Mahal (Mirror Palace) overlooking Maota Lake.",
+        image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "hawa-mahal",
+        name: "Hawa Mahal (Palace of Winds)",
+        lat: 26.9239,
+        lng: 75.8267,
+        category: "Iconic Landmark",
+        suggestedVisitMinutes: 45,
+        description: "Pink sandstone honeycomb facade with 953 intricate jharokha lattice windows.",
+        image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "city-palace-jaipur",
+        name: "City Palace Jaipur",
+        lat: 26.9258,
+        lng: 75.8237,
+        category: "Royal Residence",
+        suggestedVisitMinutes: 90,
+        description: "Royal residence blending Rajput, Mughal, and European architectural styles.",
+        image: "https://images.unsplash.com/photo-1615836245337-f5b9b2303f1c?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "jantar-mantar",
+        name: "Jantar Mantar Observatory",
+        lat: 26.9247,
+        lng: 75.8246,
+        category: "UNESCO Heritage",
+        suggestedVisitMinutes: 60,
+        description: "18th-century astronomical observatory housing the world's largest stone sundial.",
+        image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "nahargarh-fort",
+        name: "Nahargarh Fort",
+        lat: 26.9373,
+        lng: 75.8155,
+        category: "Hill Fort & Sunset",
+        suggestedVisitMinutes: 75,
+        description: "Fortress perched on the Aravalli hills delivering panoramic sunset views over Jaipur.",
+        image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "jal-mahal",
+        name: "Jal Mahal (Water Palace)",
+        lat: 26.9534,
+        lng: 75.8462,
+        category: "Scenic View",
+        suggestedVisitMinutes: 30,
+        description: "Captivating palace standing in the middle of Man Sagar Lake.",
+        image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "albert-hall-museum",
+        name: "Albert Hall Museum",
+        lat: 26.9116,
+        lng: 75.8195,
+        category: "Museum & Heritage",
+        suggestedVisitMinutes: 60,
+        description: "Indo-Saracenic museum showcasing royal artifacts, paintings, and historical weapons.",
+        image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  },
+  {
+    id: "shimla",
+    name: "Shimla",
+    state: "Himachal Pradesh",
+    country: "India",
+    center: { lat: 31.1048, lng: 77.1734 },
+    zoom: 13,
+    description: "Queen of the Hills — historic Himalayan hill station surrounded by pine forests.",
+    places: [
+      {
+        id: "mall-road-ridge",
+        name: "The Ridge & Mall Road",
+        lat: 31.1048,
+        lng: 77.1734,
+        category: "Town Center & Walkway",
+        suggestedVisitMinutes: 90,
+        description: "Pedestrian-only promenade in the heart of Shimla with colonial charm and views.",
+        image: "https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "jakhoo-temple",
+        name: "Jakhoo Temple & Hanuman Statue",
+        lat: 31.1012,
+        lng: 77.1856,
+        category: "Hilltop Temple",
+        suggestedVisitMinutes: 60,
+        description: "Ancient Hanuman temple situated on Shimla's highest peak (8,000 ft).",
+        image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "christ-church",
+        name: "Christ Church Shimla",
+        lat: 31.1052,
+        lng: 77.1748,
+        category: "Colonial Architecture",
+        suggestedVisitMinutes: 30,
+        description: "Second oldest church in North India with iconic yellow neo-Gothic facade.",
+        image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "viceregal-lodge",
+        name: "Rashtrapati Nivas (Viceregal Lodge)",
+        lat: 31.1037,
+        lng: 77.1408,
+        category: "Historic Estate",
+        suggestedVisitMinutes: 75,
+        description: "Jacobethan style former summer residence of the British Viceroy of India.",
+        image: "https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "kufri-fun-world",
+        name: "Kufri Adventure Park",
+        lat: 31.0979,
+        lng: 77.2678,
+        category: "Himalayan Nature",
+        suggestedVisitMinutes: 120,
+        description: "Snow sports and panoramic Himalayan mountain viewpoint near Shimla.",
+        image: "https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "chadwick-falls",
+        name: "Chadwick Waterfalls",
+        lat: 31.1147,
+        lng: 77.1432,
+        category: "Nature Waterfall",
+        suggestedVisitMinutes: 60,
+        description: "Cascading waterfall nestled inside dense Glen pine and deodar forests.",
+        image: "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  },
+  {
+    id: "amritsar",
+    name: "Amritsar",
+    state: "Punjab",
+    country: "India",
+    center: { lat: 31.6340, lng: 74.8723 },
+    zoom: 13,
+    description: "Spiritual capital of Punjab — home to the Golden Temple, Punjabi hospitality, and historic forts.",
+    places: [
+      {
+        id: "golden-temple",
+        name: "Sri Harmandir Sahib (Golden Temple)",
+        lat: 31.6199,
+        lng: 74.8765,
+        category: "Spiritual Shrine",
+        suggestedVisitMinutes: 120,
+        description: "Holiest Sikh Gurdwara plated in gold, surrounded by the sacred Amrit Sarovar lake.",
+        image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "wagah-border",
+        name: "Wagah Border Ceremony",
+        lat: 31.6047,
+        lng: 74.5762,
+        category: "Patriotic Event",
+        suggestedVisitMinutes: 90,
+        description: "Famous military Beating Retreat ceremony at the India-Pakistan border checkpoint.",
+        image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "jallianwala-bagh",
+        name: "Jallianwala Bagh Memorial",
+        lat: 31.6206,
+        lng: 74.8801,
+        category: "Historic Memorial",
+        suggestedVisitMinutes: 45,
+        description: "Historic public garden and national memorial preserving the 1919 freedom struggle history.",
+        image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "gobindgarh-fort",
+        name: "Gobindgarh Fort",
+        lat: 31.6300,
+        lng: 74.8631,
+        category: "Heritage Fort",
+        suggestedVisitMinutes: 75,
+        description: "18th-century military fort built by Maharaja Ranjit Singh, featuring 7D shows and museums.",
+        image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "partition-museum",
+        name: "The Partition Museum",
+        lat: 31.6232,
+        lng: 74.8795,
+        category: "Museum",
+        suggestedVisitMinutes: 60,
+        description: "World's first museum dedicated to the stories, artifacts, and history of the 1947 Partition.",
+        image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "durgiana-temple",
+        name: "Durgiana Temple (Laxmi Narayan)",
+        lat: 31.6322,
+        lng: 74.8690,
+        category: "Scenic Shrine",
+        suggestedVisitMinutes: 45,
+        description: "Hindu temple built in the architecture of the Golden Temple inside a sacred lake.",
+        image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
   }
 ];
+
+// Helper to calculate haversine distance client-side
+function haversineDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371000; // Earth radius in meters
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return Math.round(R * c);
+}
+
+// Client-side nearest-neighbor TSP solver fallback
+function fallbackOptimizeClient(payload) {
+  const { placeIds, mode, roundTrip, startPlaceId, places: inputPlaces } = payload;
+  const pool = (inputPlaces && inputPlaces.length > 0) ? inputPlaces : FALLBACK_CITIES.flatMap((c) => c.places);
+  let places = placeIds
+    .map((id) => pool.find((p) => p.id === id))
+    .filter(Boolean);
+
+  if (places.length === 0 && inputPlaces && inputPlaces.length > 0) {
+    places = inputPlaces;
+  }
+
+  if (places.length === 0) {
+    return { order: [], legs: [], totalDistance: 0, totalDuration: 0, estimated: true };
+  }
+
+  let startIndex = startPlaceId ? places.findIndex((p) => p.id === startPlaceId) : 0;
+  if (startIndex === -1) startIndex = 0;
+
+  const order = [];
+  const visited = new Set();
+  let current = places[startIndex];
+  
+  order.push(current.id);
+  visited.add(current.id);
+
+  const legs = [];
+  let totalDistance = 0;
+
+  while (visited.size < places.length) {
+    let nextPlace = null;
+    let minDist = Infinity;
+    for (let p of places) {
+      if (!visited.has(p.id)) {
+        const d = haversineDistance(current.lat, current.lng, p.lat, p.lng);
+        if (d < minDist) {
+          minDist = d;
+          nextPlace = p;
+        }
+      }
+    }
+    if (nextPlace) {
+      const speed = mode === "bike" ? 4.0 : mode === "car" ? 8.0 : 1.25; // m/s
+      const duration = Math.round(minDist / speed);
+      legs.push({
+        from: current.id,
+        to: nextPlace.id,
+        distance: minDist,
+        duration: duration
+      });
+      totalDistance += minDist;
+      order.push(nextPlace.id);
+      visited.add(nextPlace.id);
+      current = nextPlace;
+    }
+  }
+
+  if (roundTrip) {
+    const startPlace = places[startIndex];
+    const dist = haversineDistance(current.lat, current.lng, startPlace.lat, startPlace.lng);
+    const speed = mode === "bike" ? 4.0 : mode === "car" ? 8.0 : 1.25;
+    const duration = Math.round(dist / speed);
+    legs.push({
+      from: current.id,
+      to: startPlace.id,
+      distance: dist,
+      duration: duration
+    });
+    totalDistance += dist;
+    order.push(startPlace.id);
+  }
+
+  const speed = mode === "bike" ? 4.0 : mode === "car" ? 8.0 : 1.25;
+  const totalDuration = Math.round(totalDistance / speed);
+
+  return {
+    order,
+    legs,
+    totalDistance,
+    totalDuration,
+    estimated: true
+  };
+}
 
 export async function fetchCities() {
   try {
     const res = await apiClient.get("/api/cities");
-    if (res.data && res.data.cities) {
-      return res.data.cities;
+    const payload = res.data?.data || res.data;
+    if (payload && payload.cities) {
+      return payload.cities;
     }
   } catch (err) {
     console.warn("Backend API not reached directly, using fallback cities data.", err.message);
@@ -153,7 +547,8 @@ export async function fetchCities() {
 export async function optimizeRouteApi(payload) {
   try {
     const res = await apiClient.post("/api/optimize", payload);
-    return res.data;
+    const data = res.data?.data || res.data;
+    return data;
   } catch (err) {
     console.warn("Backend API optimize error, executing client-side fallback solver.", err.message);
     return fallbackOptimizeClient(payload);
@@ -163,7 +558,8 @@ export async function optimizeRouteApi(payload) {
 export async function fetchRouteGeometryApi(payload) {
   try {
     const res = await apiClient.post("/api/route-geometry", payload);
-    return res.data.geometry;
+    const data = res.data?.data || res.data;
+    return data?.geometry || data;
   } catch (err) {
     console.warn("Backend API geometry error, using straight line fallback.", err.message);
     if (payload.places) {
@@ -179,7 +575,8 @@ export async function fetchRouteGeometryApi(payload) {
 export async function saveTripApi(payload) {
   try {
     const res = await apiClient.post("/api/trips", payload);
-    return res.data;
+    const data = res.data?.data || res.data;
+    return data;
   } catch (err) {
     console.warn("Save trip error:", err.message);
     throw err;
@@ -189,7 +586,8 @@ export async function saveTripApi(payload) {
 export async function fetchSavedTripApi(tripId) {
   try {
     const res = await apiClient.get(`/api/trips/${tripId}`);
-    return res.data.trip;
+    const data = res.data?.data || res.data;
+    return data?.trip || data;
   } catch (err) {
     console.warn("Fetch saved trip error:", err.message);
     return null;
@@ -199,7 +597,8 @@ export async function fetchSavedTripApi(tripId) {
 export async function seedCitiesApi() {
   try {
     const res = await apiClient.post("/api/cities/seed");
-    return res.data;
+    const data = res.data?.data || res.data;
+    return data;
   } catch (err) {
     console.warn("Seed cities error:", err.message);
     throw err;

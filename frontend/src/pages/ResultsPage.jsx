@@ -1,8 +1,10 @@
 import React from "react";
 import Results from "../components/Results";
 import { useRoute } from "../context/RouteContext";
+import { useNavigate } from "react-router-dom";
 
 export default function ResultsPage() {
+  const navigate = useNavigate();
   const {
     selectedCity,
     orderedPlaces,
@@ -13,7 +15,6 @@ export default function ResultsPage() {
     roundTrip,
     handleToggleRoundTrip,
     handleRemovePlace,
-    setActiveStep,
     runOptimization
   } = useRoute();
 
@@ -28,7 +29,7 @@ export default function ResultsPage() {
       roundTrip={roundTrip}
       onToggleRoundTrip={handleToggleRoundTrip}
       onRemovePlace={handleRemovePlace}
-      onAddMorePlaces={() => setActiveStep("select")}
+      onAddMorePlaces={() => navigate("/select")}
       onReOptimize={() => runOptimization()}
     />
   );
